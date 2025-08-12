@@ -1,0 +1,61 @@
+mixin calculator()
+    .calculator.circle-over-effect
+        .calculator-l
+            .question
+                .question-num 01
+                .question-block 
+                    .question-title Какой сайт Вам нужен?
+                    select.question-select.custom-select
+                        option(value="landing page") Лендинг (страница, чаще всего с товаром / услугой)
+                        option(value="shop page") Магазин
+            .question
+                .question-num 02
+                .question-block 
+                    .question-title Дополнительные услуги
+                    .qustion-checkboxes 
+                        .qustion-checkbox
+                            input(type="checkbox" name="addition_services" id="addition_services_1")
+                            label(for="addition_services_1").blue Seo продвижение сайта в ТОП
+                        .qustion-checkbox
+                            input(type="checkbox" name="addition_services" id="addition_services_2")
+                            label(for="addition_services_2") Яндекс Директ
+                        .qustion-checkbox
+                            input(type="checkbox" name="addition_services" id="addition_services_3")
+                            label(for="addition_services_3") Google реклама
+                        .qustion-checkbox
+                            input(type="checkbox" name="addition_services" id="addition_services_4")
+                            label(for="addition_services_4") Разработка логотипа
+
+
+            .question
+                .question-num 03
+                .question-block 
+                    .question-title Социальные сети
+                    .qustion-checkboxes 
+                        .qustion-checkbox
+                            input(type="checkbox" name="social_netw" id="social_netw_1")
+                            label(for="social_netw_1") Вконтакте
+                        .qustion-checkbox
+                            input(type="checkbox" name="social_netw" id="social_netw_2")
+                            label(for="social_netw_2") Instagram
+                        .qustion-checkbox
+                            input(type="checkbox" name="social_netw" id="social_netw_3")
+                            label(for="social_netw_3") Одноклассники
+                        .qustion-checkbox
+                            input(type="checkbox" name="social_netw" id="social_netw_4")
+                            label(for="social_netw_4") Свой вариант
+        .calculator-r
+            .question
+                .question-num 04
+                .question-block 
+                    .question-title Оставьте заявку
+                    .question-text Наш менеджер свяжется с Вами в течение 1-2 рабочих дней и уточнит все детали
+            .question-final-price
+                .question-final-price-text <span class="space">Примерная</span> стоимость
+                .question-final-price-value 25 000
+            .qustion-input-group 
+                input(type="text" placeholder="Ваше имя")
+                input(type="text" placeholder="E-mail")
+                input(type="text" placeholder="Сообщение")
+                button(type="submit").btn.btn-blue оставить заявку
+                button(type="button").btn.btn-text заказать другую услугу

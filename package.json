@@ -1,0 +1,85 @@
+{
+  "name": "aznona",
+  "version": "1.0.0",
+  "description": "Проект Aznona",
+  "main": "index.js",
+  "scripts": {
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && webpack-dev-server --open --config ./build/webpack.dev.conf.js",
+    "build": "webpack --config ./build/webpack.build.conf.js",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix --color"
+  },
+  "browserslist": [
+    "> 1% and last 3 versions",
+    "not dead",
+    "not OperaMini all",
+    "ie >= 11",
+    "Edge >= 12"
+  ],
+  "author": "klon_008@mail.ru",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "autoprefixer": "^9.6.1",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.1.0",
+    "cssnano": "^4.1.10",
+    "cz-emoji": "^1.1.2",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "file-loader": "^4.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "mini-css-extract-plugin": "^0.8.0",
+    "path": "^0.12.7",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^1.19.0",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "resolve-url-loader": "^3.1.2",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.1.0",
+    "sort-css-media-queries": "^1.4.3",
+    "style-loader": "^1.0.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-emoji"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn lint:fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "bootstrap": "4.6.1",
+    "bootstrap-select": "^1.13.18",
+    "jquery": "^3.5.1",
+    "jquery-ui-bundle": "^1.12.1-migrate",
+    "jquery-ui-touch-punch": "^0.2.3",
+    "popper.js": "^1.16.1",
+    "swiper": "^7.2.0"
+  }
+}

@@ -1,0 +1,349 @@
+@use "sass:math";
+.aznona-modal {
+    min-width: 976px;
+    .modal-content {
+        background-image: url("/assets/img/png/modal1-bg.png");
+        background-position: center -126px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        min-height: 465px;
+        border: none;
+        border-radius: 5px;
+    }
+    .modal-header {
+        border-bottom: none;
+        background: transparent;
+        padding-top: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 50px;
+        display: flex;
+        align-items: center;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        .modal-title {
+            font-family: "Futura PT Demi";
+            font-size: 24px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .close {
+            color: #fff;
+            text-shadow: none;
+            opacity: 1;
+            background-image: url("/assets/img/png/modal-cross.png");
+            width: 12px;
+            height: 11px;
+            background-position: center;
+            background-repeat: no-repeat;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+    .modal-body {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 50px;
+        
+    }
+}
+.modal-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 317px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+        width: 20%;
+        height: 28.5px;
+        flex: 0 0 math.div(100%, 15);
+        :nth-child(15n) {
+            flex-basis: 100%;
+        }
+        a {
+            font-family: Futura PT;
+            font-size: 16px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.31;
+            letter-spacing: normal;
+            text-align: left;
+            color: #03c3dd;
+        }
+        &.active {
+            a {
+                color: #fff;
+                border-radius: 10px;
+                background-color: #039bf1;
+                display: inline-block;
+                padding: 4px 6px;
+                margin-left: -6px;
+            }
+        }
+    }
+}
+.aznona-modal-c-sm {
+    min-width: 667px;
+    .modal-content {
+        background-image: url("/assets/img/png/modal1-bg.png");
+        background-position: center -58px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        min-height: 290px;
+        border: none;
+        border-radius: 5px;
+    }
+    .search-input {
+        position: relative;
+        button {
+            display: block;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            position: absolute;
+            right: 0;
+            top: 10px;
+        }
+    }
+    .find-city {
+        background: transparent;
+        display: block;
+        border: none;
+        color: #3a3a3a;
+        width: 100%;
+        font-size: 30px;
+        padding: 10px 0 8px;
+        margin-top: 18px;
+        margin-bottom: 28px;
+        border-bottom: 1px solid #ddd;
+
+        font-family: Futura PT;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.31;
+        letter-spacing: normal;
+        text-align: left;
+
+        @include placeholder {
+            color: #bebebe;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    .modal-header {
+        border-bottom: none;
+        background: transparent;
+        padding-top: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 50px;
+        display: flex;
+        align-items: center;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        .modal-title {
+            font-family: "Futura PT Demi";
+            font-size: 24px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .close {
+            color: #fff;
+            text-shadow: none;
+            opacity: 1;
+            background-image: url("/assets/img/png/modal-cross.png");
+            width: 12px;
+            height: 11px;
+            background-position: center;
+            background-repeat: no-repeat;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+    .modal-body {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 50px;
+        .modal-list {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            height: auto;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li {
+                width: 20%;
+                height: 28.5px;
+                flex: 0 0 math.div(100%, 5);
+                :nth-child(5n) {
+                    flex-basis: 100%;
+                }
+                a {
+                    font-family: Futura PT;
+                    font-size: 16px;
+                    font-weight: 500;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.31;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #03c3dd;
+                }
+                &.active {
+                    a {
+                        color: #fff;
+                        border-radius: 10px;
+                        background-color: #039bf1;
+                        display: inline-block;
+                        padding: 4px 6px;
+                        margin-left: -6px;
+                    }
+                }
+            }
+        }
+    }
+}
+.aznona-modal-sm {
+    min-width: 455px;
+    .modal-content {
+        background-image: url("/assets/img/png/modal2-bg.png");
+        background-position: center 0px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        min-height: 290px;
+        border: none;
+        border-radius: 5px;
+    }
+    .modal-header {
+        border-bottom: none;
+        background: transparent;
+        padding-top: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 50px;
+        display: flex;
+        align-items: flex-start;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        .modal-title {
+            font-family: "Futura PT Demi";
+            font-size: 24px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #fff;
+            text-transform: uppercase;
+            .modal-title__m {
+                font-size: 18px;
+                display: block;
+            }
+        }
+        .close {
+            color: #fff;
+            text-shadow: none;
+            opacity: 1;
+            background-image: url("/assets/img/png/modal-cross.png");
+            width: 12px;
+            height: 11px;
+            background-position: center;
+            background-repeat: no-repeat;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+    .modal-body {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 50px;
+        .modal-form {
+            display: flex;
+            flex-direction: column;
+            .modal-form__input {
+                border: 1px solid #03bae2;
+                border-radius: 22.5px;
+                padding: 18px 31px 16px 31px;
+                font-family: Futura PT;
+                font-size: 16px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: left;
+                color: #03bae2;
+
+                margin-bottom: 10px;
+                margin-left: 37px;
+                margin-right: 37px;
+                resize: none;
+                &:focus,
+                &:focus-visible {
+                    border-color: #019abd;
+                    outline: none;
+                }
+                @include placeholder {
+                    color: #03bae2;
+                }
+            }
+            .modal-form__submit {
+                width: 194px;
+                padding: 21px 39px 18px 39px;
+                margin: 19px auto 0;
+                border-radius: 5px;
+                background-color: #1364fe;
+
+                font-family: "Futura PT Demi";
+                font-size: 13px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: center;
+                color: #fff;
+            }
+        }
+    }
+}
+.aznona-modal-sm__promo {
+    .modal-content {
+        background-image: url("/assets/img/png/modal3-bg.png");
+    }
+    
+    .modal-body {
+        margin-top: 20px;
+        .modal-form {
+            .modal-form__submit {
+                padding: 21px 18px 18px;
+            }
+        }
+    }
+}

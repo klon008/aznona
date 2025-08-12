@@ -1,0 +1,27 @@
+@import "utils/vars"
+@import "utils/mixins"
+
+.visually-hidden
+  position absolute
+  width 1px
+  height 1px
+  margin -1px
+  padding 0
+  border 0
+  opacity 0
+  white-space nowrap
+  clip-path inset(50%)
+  clip rect(0 0 0 0)
+  overflow hidden
+
+*,
+*::before,
+*::after
+  box-sizing inherit
+
+body
+  box-sizing border-box
+  font-family $mainFont
+  font-weight 400
+
+@import "styl/*"

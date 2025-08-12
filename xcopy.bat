@@ -1,0 +1,1 @@
+robocopy C:\Work\Aznona\dist\assets C:\Work\XAMPP\htdocs\apps\localtesting\wp-content\themes\aznona\assets /E /is

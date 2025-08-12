@@ -1,0 +1,47 @@
+block header
+  .container-fluid.p-0.desktop-header.header-wrapper
+    .container 
+      .row
+        .col-12
+          nav.header-menu#header-nav
+            .header-logo
+                    a(href="/").site-logo
+                      img(src="/assets/img/png/Topzana-logo-end.png", alt="Logo")
+                    .site-sublogo
+                      |СЕО продвижение сайта в <span class="logo-yellow">Москве</span>
+            ul.header-list
+              
+              li.header-center
+                a(href='/')
+                  <span class="white">8 800</span> 551-38-05
+              li.header-location__wrapper
+                div.header-location
+                  img(src="/assets/img/png/location-icon.png", alt="location icon").header-location__icon
+                  button.header-location__btn(type='button' data-toggle='modal' data-target='#modal-choose-cities-list') Москва
+              li.header-center__mobile 
+                a(href="/") 
+                  img(src="/assets/img/png/mob_phone_icon.png", alt="call icon")
+              li.header-btn-1
+                button.btn.btn-outline(type='button' data-toggle='modal' data-target='#modal-consultation-sm') заказать обратный звонок
+            
+            ul.header-navigation
+              li 
+                a(href="/") Главная
+              li
+                a(href="/#uslugi") Услуги 
+              li 
+                a(href="/portfolio.html") Портфолио
+              li 
+                a(href="/blog.html") Блог
+              li 
+                a(href="/aboutus.html") О нас
+              li 
+                a(href="/contacts.html") Контакты
+              li.header-btn-2
+                button.btn.btn-yellow бесплатный аудит сайта
+            ul.header-list-btn(style="list-style: none;")
+              li.header-btn-3
+                button.burger-menu#burger-header-menu
+                  img(src="/assets/img/png/hamburger.png", alt="menu icon")
+                button.burger-menu.burger-menu__close.position-relative#burger-header-menu__close(style="display:none;")
+                  div.cross-close

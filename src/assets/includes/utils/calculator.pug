@@ -1,0 +1,115 @@
+mixin calculator()
+    .calculator.circle-over-effect
+        .calculator-l
+            .question
+                .question-num 01
+                .question-block 
+                    .question-title Какой сайт Вам нужен?
+                    select.question-select.bootstrap-select.selectpicker(name="qqq1")
+                        option(value="landing page" data-content='Лендинг <span class="blue-text">(страница, чаще всего с товаром / услугой)</span>') Лендинг (страница, чаще всего с товаром / услугой)
+                        option(value="shop page") Магазин
+                    select.question-select.bootstrap-select.selectpicker(name="qqq2")
+                        option(value="Сайт-визитка ТАРИФ 1" data-content='Сайт-визитка <span class="blue-text">ТАРИФ 1</span>') Сайт-визитка ТАРИФ 1
+                        option(value="Сайт-визитка ТАРИФ 2" data-content='Сайт-визитка <span class="blue-text">ТАРИФ 2</span>') Сайт-визитка ТАРИФ 2
+                    .question-just-textes 
+                        .jt-50 Адаптивный дизайн
+                        .jt-50 Форма обратной связи
+                        .jt-50 Установка на хостинг
+                        .jt-50 Количество страниц - 5
+                        .jt-50 Админ-панель
+                        .jt-50 Сроки - 7 дней
+
+            .question
+                .question-num 02
+                .question-block 
+                    .question-title Дополнительные услуги
+                    .qustion-checkboxes 
+                        .qustion-checkbox
+                            input(type="checkbox" name="addition_services" id="addition_services_1")
+                            label(for="addition_services_1").blue Seo продвижение сайта в ТОП
+                        .qustion-checkbox
+                            input(type="checkbox" name="addition_services" id="addition_services_2")
+                            label(for="addition_services_2") Яндекс Директ
+                        .qustion-checkbox
+                            input(type="checkbox" name="addition_services" id="addition_services_3")
+                            label(for="addition_services_3") Google реклама
+                        .qustion-checkbox
+                            input(type="checkbox" name="addition_services" id="addition_services_4")
+                            label(for="addition_services_4") Разработка логотипа
+
+
+                    select.question-select.bootstrap-select.selectpicker
+                        option(value="Яндекс.Директ ТАРИФ 1" data-content='Яндекс.Директ <span class="blue-text">ТАРИФ 1</span>') Яндекс.Директ ТАРИФ 1
+                        option(value="Яндекс.Директ ТАРИФ 2" data-content='Яндекс.Директ <span class="blue-text">ТАРИФ 2</span>') Яндекс.Директ ТАРИФ 2
+                    .question-just-textes 
+                        .jt-50 Отбор минус слов
+                        .jt-50 Настроййка UTM меток
+                        .jt-50 Написание объявлений
+                        .jt-50 Консультация
+                        .jt-50 Выставление ставок
+                        .jt-50 Количество ключ. слов - 70
+            .question
+                .question-num 03
+                .question-block 
+                    .question-title Социальные сети
+                    .qustion-checkboxes 
+                        .qustion-checkbox
+                            input(type="checkbox" name="social_netw" id="social_netw_1")
+                            label(for="social_netw_1") Вконтакте
+                        .qustion-checkbox
+                            input(type="checkbox" name="social_netw" id="social_netw_2")
+                            label(for="social_netw_2") Instagram
+                        .qustion-checkbox
+                            input(type="checkbox" name="social_netw" id="social_netw_3")
+                            label(for="social_netw_3") Одноклассники
+                        .qustion-checkbox
+                            input(type="checkbox" name="social_netw" id="social_netw_4")
+                            label(for="social_netw_4") Свой вариант
+                    .question-title.question-title__black
+                        |Услуга - Вконтакте
+                    .qustion-checkboxes 
+                        .qustion-checkbox
+                            input(type="checkbox" name="social_netw_sub" id="social_netw_sub1")
+                            label(for="social_netw_sub1") Создание группы
+                        .qustion-checkbox
+                            input(type="checkbox" name="social_netw_sub" id="social_netw_sub2")
+                            label(for="social_netw_sub2") Дизайн
+                        .qustion-checkbox
+                            input(type="checkbox" name="social_netw_sub" id="social_netw_sub_3")
+                            label(for="social_netw_sub_3") Настройка рекламы
+                        .qustion-checkbox
+                            input(type="checkbox" name="social_netw_sub" id="social_netw_sub_4")
+                            label(for="social_netw_sub_4") Месяц ведения и админ.
+                    select.question-select.bootstrap-select.mb-4.selectpicker(name="social__netw_ss_select")
+                        option(value="Выберите тариф (Вконтакте)" data-content='Выберите тариф (Вконтакте)') Выберите тариф (Вконтакте)
+                        option(value="Выберите тариф (Вконтакте2)" data-content='Выберите тариф (Вконтакте2)') Выберите тариф (Вконтакте2)
+                    .question-title.question-title__black.qusetion-title__slider
+                        div.mb-3 Выберите нужное количество подписчиков
+                        input(type="text" id="subscribers_slider" readonly).d-none
+                        div.slider-range.mb-4
+                            .underline
+                                
+                    .qustion-checkboxes.mt-4
+                        .qustion-checkbox.qustion-checkbox__mobile-full
+                            input(type="checkbox" name="social_nvv" id="social_all_inclusive")
+                            label(for="social_all_inclusive").d-flex.align-items-baseline
+                                    div.d-inline-block Все услуги для Вконтакте 
+                                        br
+                                        |<span class="blue-text">Выгоднее!</span>
+        .calculator-r
+            .question
+                .question-num 04
+                .question-block 
+                    .question-title Оставьте заявку
+                    .question-text Наш менеджер свяжется с Вами в течение 1-2 рабочих дней и уточнит все детали
+            .question-final-price
+                .question-final-price-text <span class="space">Примерная</span> стоимость
+                .question-final-price-value 25 000
+            .qustion-input-group 
+                input(type="text" placeholder="Ваше имя")
+                input(type="text" placeholder="E-mail")
+                input(type="text" placeholder="Сообщение")
+                button(type="submit").btn.btn-blue оставить заявку
+                button(type="button").btn.btn-text заказать другую услугу
+
+

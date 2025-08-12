@@ -1,0 +1,22 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb/base",
+    "prettier"
+  ],
+  "rules": {
+    "import/no-extraneous-dependencies": "off",
+    "no-plusplus": "off",
+    "max-len": ["error", 150, {
+      "ignoreUrls": true
+    }],
+    "eol-last": "off"
+  },
+  "plugins": [
+    "prettier"
+  ]
+}

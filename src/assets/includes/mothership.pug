@@ -1,0 +1,42 @@
+block vars
+  include utils/vars.pug
+  include utils/mixins.pug
+  include utils/calculator.pug
+
+doctype html
+html(lang="en")
+  head
+    meta(charset='UTF-8')
+    title #{title}
+    block metatags
+      meta(name="description" content=description)
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      meta(http-equiv='X-UA-Compatible' content='ie=edge')
+      meta(name='robots' content='noindex, nofollow')
+      meta(name="googlebot" content="noindex, nofollow")
+      meta(name="yandex" content="none")
+      link(rel='apple-touch-icon' sizes='72x72' href='/apple-touch-icon.png')
+      link(rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png')
+      link(rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png')
+      link(rel='manifest' href='/site.webmanifest')
+      link(rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5')
+      meta(name='apple-mobile-web-app-title' content='Aznona')
+      meta(name='application-name' content='Aznona')
+      meta(name='msapplication-TileColor' content='#da532c')
+      meta(name='theme-color' content='#ffffff')
+
+    block links
+      //- link(href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet")
+      //- link(href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet")
+      //- link(href="https://necolas.github.io/normalize.css/latest/normalize.css" rel="stylesheet")
+      //- app.css подключен через Webpack
+
+  body(id=bodyId)
+    header.header#header
+      include pug/header.pug
+    block content
+    div.footer
+      include pug/footer.pug
+    include pug/modals.pug
+    block script
+      //- script(src='https://brokensquare.com/Code/Canvallax.js/dist/Canvallax.min.js')

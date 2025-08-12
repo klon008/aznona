@@ -1,0 +1,20 @@
+@mixin placeholder2 {
+    &::-webkit-input-placeholder,
+    &:-moz-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder,
+    &:-webkit-input-placeholder,
+    &::placeholder {
+      @content;
+    }
+}
+@mixin placeholder($all: default) {
+  @if $all == default {
+    $all: ("&::-webkit-input-placeholder", "&:-moz-placeholder", "&::-moz-placeholder", "&:-ms-input-placeholder");
+  }
+  @each $placeholder in $all {
+    #{unquote($placeholder)} {
+      @content;
+    }
+  }
+}

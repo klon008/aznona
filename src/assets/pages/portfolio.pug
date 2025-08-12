@@ -1,0 +1,237 @@
+extends ../includes/mothership.pug
+
+append vars
+    - var title = 'Aznona'
+    - var description = 'Portfolio - Aznona'
+    - var inner = false
+    - var pageClass = 'portfolio_page'
+
+mixin portfolio-item(img='qfsc8pgpdjm.png')
+    a(href="#").portfolio-item 
+        img(src="/assets/img/png/"+img alt="portfolio-image").portfolio-item__img
+
+
+block content
+    div(class=pageClass)
+        section.section-1.pt-4
+            .container 
+                .row 
+                    .col-12.mt-4
+                        div.pseudo-text-f.unselectable topzana
+                        h1.mb-4 Портфолио<br><span class="">работ</span>
+
+                        p.mt-4.col-12.col-xl-8.p-0 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        img(src="/assets/img/png/e-ellipses.png" alt="e-ellipses").e-ellipses
+        section.section-portfolio
+            .container
+                .row
+                    .col-12
+                        .d-flex.portolio-filter__buttons
+                            button.btn.btn-outline-blue.active Разработка и IT
+                            button.btn.btn-outline-blue О маркетинге
+                            button.btn.btn-outline-blue Новости
+                            button.btn.btn-outline-blue Актуальное
+                            button.btn.btn-outline-blue Показать все
+                    .col-12
+                        .portfolio-grid 
+                            +portfolio-item('dmhubtraining-social-media-training-malaysia-banner.png')
+                            +portfolio-item('Iklan-Online.png')
+                            +portfolio-item('dmhubtraining-social-media-training-malaysia-banner.png')
+                            +portfolio-item('dmhubtraining-social-media-training-malaysia-banner.png')
+                            +portfolio-item('Iklan-Online.png')
+                            +portfolio-item('dmhubtraining-social-media-training-malaysia-banner.png')
+
+        section.section-5
+            .container 
+                .row
+                    .col-12
+                        .section-head
+                            button.btn.btn-b-yellow Читать все отзывы 
+                            h2 <span class="d-block">отзывы о</span>
+                                |<span class="blue-text">нашем агентстве</span>
+                    .col-12.slider-col-wrapper 
+                        .slider
+                            // Slider main container
+                            .swiper
+                                // Additional required wrapper
+                                .swiper-wrapper
+                                    // Slides
+                                    .swiper-slide
+                                        .swiper-awatar
+                                            img(src="/assets/img/png/avatar.png" alt="avatar")
+                                        .swiper-name__wrap
+                                            .swiper-name Тёма Хитров
+                                            .swiper-date 12 отября 2021
+                                        .swiper-text Хочу поблагодарить всю команду рекламного агентства, никак не ожидал такого быстрого результата, ранее нанимал для этого людей в офис, но результата никакого не было, поэтому думал, что соц сети уже не работают, ой как я ошибался!
+                                            |<br/><br/>Ещё раз огромное спасибо и процветания вашему агентству!
+                                    .swiper-slide
+                                        .swiper-awatar
+                                            img(src="/assets/img/png/avatar.png" alt="avatar")
+                                        .swiper-name__wrap
+                                            .swiper-name Тёма Хитров
+                                            .swiper-date 12 отября 2021
+                                        .swiper-text Хочу поблагодарить всю команду рекламного агентства, никак не ожидал такого быстрого результата, ранее нанимал для этого людей в офис, но результата никакого не было, поэтому думал, что соц сети уже не работают, ой как я ошибался!
+                                            |<br/><br/>Ещё раз огромное спасибо и процветания вашему агентству!
+                                    .swiper-slide
+                                        .swiper-awatar
+                                            img(src="/assets/img/png/avatar.png" alt="avatar")
+                                        .swiper-name__wrap
+                                            .swiper-name Тёма Хитров
+                                            .swiper-date 12 отября 2021
+                                        .swiper-text Хочу поблагодарить всю команду рекламного агентства, никак не ожидал такого быстрого результата, ранее нанимал для этого людей в офис, но результата никакого не было, поэтому думал, что соц сети уже не работают, ой как я ошибался!
+                                            |<br/><br/>Ещё раз огромное спасибо и процветания вашему агентству!
+                                    .swiper-slide
+                                        .swiper-awatar
+                                            img(src="/assets/img/png/avatar.png" alt="avatar")
+                                        .swiper-name__wrap
+                                            .swiper-name Тёма Хитров
+                                            .swiper-date 12 отября 2021
+                                        .swiper-text Хочу поблагодарить всю команду рекламного агентства, никак не ожидал такого быстрого результата, ранее нанимал для этого людей в офис, но результата никакого не было, поэтому думал, что соц сети уже не работают, ой как я ошибался!
+                                            |<br/><br/>Ещё раз огромное спасибо и процветания вашему агентству!
+                                // If we need pagination
+                                .swiper-pagination
+                .col-12
+                    .section-foot.only-mobile
+                        button.btn.btn-b-yellow Читать все отзывы 
+        section.section-4
+            .container 
+                .row 
+                    .col-4.ten-column
+                        div.ten-reasons__title 
+                            div.ten-reasons__10 10 
+                            div.ten-reasons__why Причин Почему мы
+                    .col-4.ten-column
+                        .ten-blocks
+                            .ten-blocks__num 01
+                            .ten-blocks__text
+                                span.d-block.blue-text Более 450
+                                | отзывов о нас
+                    .col-4.ten-column
+                        .ten-blocks
+                            .ten-blocks__num 02
+                            .ten-blocks__text
+                                span.d-block Работаем по 
+                                | договору
+                    .col-4.ten-column
+                        .ten-blocks
+                            .ten-blocks__num 03
+                            .ten-blocks__text
+                                span.d-block Дарим промокод
+                                span.blue-text на 6000 руб
+                    .col-4.ten-column
+                        .ten-blocks
+                            .ten-blocks__num 04
+                            .ten-blocks__text
+                                span.d-block Безналичная 
+                                | оплата
+                    .col-4.ten-column
+                        .ten-blocks
+                            .ten-blocks__num 05
+                            .ten-blocks__text
+                                span.d-block Верифицированная 
+                                | группа VK
+                    .col-4.ten-column
+                        .ten-blocks
+                            .ten-blocks__num 06
+                            .ten-blocks__text
+                                span.d-block Сертифицированное 
+                                | агентство в Google
+                    .col-4.ten-column
+                        .ten-blocks
+                            .ten-blocks__num 07
+                            .ten-blocks__text
+                                span.d-block Сертифицированное 
+                                | агентство в Яндексе
+                    .col-4.ten-column
+                        .ten-blocks
+                            .ten-blocks__num 08
+                            .ten-blocks__text.ten-blocks__text-sm
+                                span.d-block Работаем с 
+                                | физическими и 
+                                | юридическими лицами
+                    .col-4.ten-column
+                        .ten-blocks
+                            .ten-blocks__num 09
+                            .ten-blocks__text.ten-blocks__text-sm
+                                span.d-block Оказываем услуги в 
+                                | данной сфере уже 
+                                span.blue-text более 10 лет
+                    .col-4.ten-column
+                        .ten-blocks
+                            .ten-blocks__num 10
+                            .ten-blocks__text.ten-blocks__text-sm
+                                span.d-block Над Вашим заказом 
+                                |будет работать личный
+                                |менеджер
+        section.section-6
+            .container 
+                .row 
+                    .col-12
+                        .section-head
+                            h2.title 
+                                <span class="d-block">Гарантии</span>
+                                <span class="blue-text">Нашей работы</span>
+                            button.btn.btn-text Смотреть все
+
+                    .col-12.slider-col-wrapper
+                        .slider
+                            .swiper-certificates
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img(src="/assets/img/png/certificate.png" alt="certificate")
+                                    .swiper-slide
+                                        img(src="/assets/img/png/certificate.png" alt="certificate")
+                                    .swiper-slide
+                                        img(src="/assets/img/png/certificate.png" alt="certificate")
+                                    .swiper-slide
+                                        img(src="/assets/img/png/certificate.png" alt="certificate")
+                                // If we need pagination
+                                .swiper-pagination
+                    .col-12
+                        .section-foot.only-mobile
+                            button.btn.btn-text Смотреть все
+        section.contact-form__section 
+            .container
+                .row 
+                    .col-12
+                        div.contact-form
+                            .contact-form__head.mt-5
+                                .section-head
+                                    h2.title.text-left <span class="blue-text d-block">Хотите</span> оставить заявку?
+                                    .sub-text Наш менеджер свяжется с Вами в течение 1-2 рабочих дней и уточнит все детали
+                            .contact-form__body
+                                .contact-form__body-row
+                                    input(type="text" placeholder="Ваше имя")
+                                    input(type="email" placeholder="Email")
+                                .contact-form__body-row
+                                    textarea(placeholder="Сообщение" name="text_message" cols="30" rows="3", )
+                                .contact-form__body-row.justify-content-center.mb-5
+                                    button.btn ОТПРАВИТЬ ЗАЯВКУ
+
+
+        section.section-10 
+            .container 
+                .row
+                    .col-12 
+                        .section-head
+                            h2.title Наши <span class="blue-text">партнеры</span>
+                    .col-12.slider-col-wrapper 
+                        .slider 
+                            .swiper-partners
+                                // Additional required wrapper
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        .swiper-slide-img_wrapper
+                                            img(src="/assets/img/png/partner1.png" alt="certificate")
+                                    .swiper-slide
+                                        .swiper-slide-img_wrapper
+                                            img(src="/assets/img/png/partner2.png" alt="certificate")
+                                    .swiper-slide
+                                        .swiper-slide-img_wrapper
+                                            img(src="/assets/img/png/partner3.png" alt="certificate")
+                                    .swiper-slide
+                                        .swiper-slide-img_wrapper
+                                            img(src="/assets/img/png/partner4.png" alt="certificate")
+                                // If we need navigation buttons
+                                .swiper-button-prev
+                                .swiper-button-next

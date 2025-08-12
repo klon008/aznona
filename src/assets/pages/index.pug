@@ -1,0 +1,348 @@
+extends ../includes/mothership.pug
+
+append vars
+  - var title = 'Aznona'
+  - var description = 'Main Page Aznona'
+  - var inner = false
+  - var pageClass = 'index_page'
+
+
+
+block content
+  div(class=pageClass)
+    section.section-1.pt-4
+      .container 
+        .row 
+          .col-12.col-lg-8.mt-4
+            .pseudo-text-wrapper
+              div.pseudo-text.unselectable topzana
+            h1.mb-4 Рекламное агенство<br><span class="yellow-text">В Москве</span>
+            p.mt-4 Seo продвижение сайтов, разработка и it, маркетинг и реклама, дизайн, SEO и трафик, тексты и переводы.
+          .col-12.col-lg-4.mb-4.section-1__bg-r
+            img(src="/assets/img/png/vizitka.png" alt="vizitka").vizitka
+          .col-12.mt-4
+            .d-flex 
+              button.btn.btn-big.mr-3 Наши услуги
+              button.btn.btn-big.btn-blue Рассчитать стоимость
+    section.section-2
+      .container#uslugi
+        .row
+          .col-12
+            h2.title <span class="black_text">мы представляем</span>
+              | следующие услуги
+          .col-12
+            .uslugi-mobile-veiw.d-none
+              .swiper-wrapper
+                // Slides
+                .swiper-slide
+                  a#v-pills-seo-tab.nav-link.active(data-toggle="tab" href='#v-pills-seo' type='button' role='tab' aria-controls='v-pills-seo' aria-selected='true') seo продвижение сайтов
+                .swiper-slide
+                  a#v-pills-ads-tab.nav-link(data-toggle="tab" href='#v-pills-ads' type='button' role='tab' aria-controls='v-pills-ads' aria-selected='false') маркетинг и реклама
+                .swiper-slide
+                  a#v-pills-complex-tab.nav-link(data-toggle="tab" href='#v-pills-complex' type='button' role='tab' aria-controls='v-pills-complex' aria-selected='false') комплекс услуг
+                .swiper-slide
+                  a#v-pills-design-tab.nav-link(data-toggle="tab" href='#v-pills-design' type='button' role='tab' aria-controls='v-pills-design' aria-selected='false') дизайн
+                .swiper-slide
+                  a#v-pills-textes-tab.nav-link(data-toggle="tab" href='#v-pills-textes' type='button' role='tab' aria-controls='v-pills-textes' aria-selected='false') тексты и переводы
+                .swiper-slide
+                  a#v-pills-other-tab.nav-link(data-toggle="tab" href='#v-pills-other' type='button' role='tab' aria-controls='v-pills-other' aria-selected='false') заказать другую услугу
+              .uslugi__prev
+                img(src="/assets/img/png/prev.png" alt="prev")
+              .uslugi__next
+                img(src="/assets/img/png/prev.png" alt="next")
+            .d-flex.align-items-start.uslugi
+              //- button.uslugi__prev#v-pills-tab__prev
+              //-   img(src="/assets/img/png/prev.png" alt="prev")
+              //- button.uslugi__next#v-pills-tab__next
+              //-   img(src="/assets/img/png/prev.png" alt="prev")
+              #v-pills-tab.nav.flex-column.nav-pills.me-3(role='tablist' aria-orientation='vertical')
+                a#v-pills-seo-tab.nav-link.active(data-toggle="tab" href='#v-pills-seo' type='button' role='tab' aria-controls='v-pills-seo' aria-selected='true') seo продвижение сайтов
+                a#v-pills-ads-tab.nav-link(data-toggle="tab" href='#v-pills-ads' type='button' role='tab' aria-controls='v-pills-ads' aria-selected='false') маркетинг и реклама
+                a#v-pills-complex-tab.nav-link(data-toggle="tab" href='#v-pills-complex' type='button' role='tab' aria-controls='v-pills-complex' aria-selected='false') комплекс услуг
+                a#v-pills-design-tab.nav-link(data-toggle="tab" href='#v-pills-design' type='button' role='tab' aria-controls='v-pills-design' aria-selected='false') дизайн
+                a#v-pills-textes-tab.nav-link(data-toggle="tab" href='#v-pills-textes' type='button' role='tab' aria-controls='v-pills-textes' aria-selected='false') тексты и переводы
+                a#v-pills-other-tab.nav-link(data-toggle="tab" href='#v-pills-other' type='button' role='tab' aria-controls='v-pills-other' aria-selected='false') заказать другую услугу
+              #v-pills-tabContent.tab-content
+                #v-pills-seo.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='v-pills-seo-tab')
+                  - var title = 'SEO продвижение сайтов'
+                  - var content = "Рекламное агентство «Aznona» приветствует вас на страницах нашего сайта! Если вы узнали про нас — значит теперь узнают о вас! Наша компания более 5 лет успешно оказывает услуги по разработке, продвижению, рекламе сайтов, соцсетей в сети Интернет. В портфолио работ вы можете увидеть уровень, который мы достигли. И все это благодаря заказчикам, которые поверили в наши способности, профессионализм и не ошиблись."
+                  - content += "<br/><br/>"
+                  - content +=  "Сайты под ключ, маркетинг, реклама, SEO, мобильные приложения"
+                  +tabpanel_content('SEO продвижение сайтов', content)
+                #v-pills-ads.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-ads-tab') ...2
+                #v-pills-complex.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-complex-tab') ...3
+                #v-pills-design.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-design-tab') ...4
+                #v-pills-textes.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-textes-tab') ...5
+                #v-pills-other.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-other-tab') ...6
+    section.section-3
+      .container 
+        .row 
+          .col-12
+            h2.section-3-title <span class="yellow_text">рассчитать</span>
+              | стоимость услуг
+          .col-12
+            +calculator
+    section.section-4
+      .container 
+        .row 
+          .col-4.ten-column
+            div.ten-reasons__title 
+              div.ten-reasons__10 10 
+              div.ten-reasons__why Причин Почему мы
+          .col-4.ten-column
+            .ten-blocks
+              .ten-blocks__num 01
+              .ten-blocks__text
+                span.d-block.blue-text Более 450
+                | отзывов о нас
+          .col-4.ten-column
+            .ten-blocks
+              .ten-blocks__num 02
+              .ten-blocks__text
+                span.d-block Работаем по 
+                | договору
+          .col-4.ten-column
+            .ten-blocks
+              .ten-blocks__num 03
+              .ten-blocks__text
+                span.d-block Дарим промокод
+                span.blue-text на 6000 руб
+          .col-4.ten-column
+            .ten-blocks
+              .ten-blocks__num 04
+              .ten-blocks__text
+                span.d-block Безналичная 
+                | оплата
+          .col-4.ten-column
+            .ten-blocks
+              .ten-blocks__num 05
+              .ten-blocks__text
+                span.d-block Верифицированная 
+                | группа VK
+          .col-4.ten-column
+            .ten-blocks
+              .ten-blocks__num 06
+              .ten-blocks__text
+                span.d-block Сертифицированное 
+                | агентство в Google
+          .col-4.ten-column
+            .ten-blocks
+              .ten-blocks__num 07
+              .ten-blocks__text
+                span.d-block Сертифицированное 
+                | агентство в Яндексе
+          .col-4.ten-column
+            .ten-blocks
+              .ten-blocks__num 08
+              .ten-blocks__text.ten-blocks__text-sm
+                span.d-block Работаем с 
+                | физическими и 
+                | юридическими лицами
+          .col-4.ten-column
+            .ten-blocks
+              .ten-blocks__num 09
+              .ten-blocks__text.ten-blocks__text-sm
+                span.d-block Оказываем услуги в 
+                | данной сфере уже 
+                span.blue-text более 10 лет
+          .col-4.ten-column
+            .ten-blocks
+              .ten-blocks__num 10
+              .ten-blocks__text.ten-blocks__text-sm
+                span.d-block Над Вашим заказом 
+                |будет работать личный
+                |менеджер
+    section.section-5
+      .container 
+        .row
+          .col-12
+            .section-head
+              button.btn.btn-b-yellow Читать все отзывы 
+              h2 <span class="d-block">отзывы о</span>
+                |<span class="blue-text">нашем агентстве</span>
+          .col-12.slider-col-wrapper 
+            .slider
+              // Slider main container
+              .swiper
+                // Additional required wrapper
+                .swiper-wrapper
+                  // Slides
+                  .swiper-slide
+                    .swiper-awatar
+                      img(src="/assets/img/png/avatar.png" alt="avatar")
+                    .swiper-name__wrap
+                      .swiper-name Тёма Хитров
+                      .swiper-date 12 отября 2021
+                    .swiper-text Хочу поблагодарить всю команду рекламного агентства, никак не ожидал такого быстрого результата, ранее нанимал для этого людей в офис, но результата никакого не было, поэтому думал, что соц сети уже не работают, ой как я ошибался!
+                      |<br/><br/>Ещё раз огромное спасибо и процветания вашему агентству!
+                  .swiper-slide
+                    .swiper-awatar
+                      img(src="/assets/img/png/avatar.png" alt="avatar")
+                    .swiper-name__wrap
+                      .swiper-name Тёма Хитров
+                      .swiper-date 12 отября 2021
+                    .swiper-text Хочу поблагодарить всю команду рекламного агентства, никак не ожидал такого быстрого результата, ранее нанимал для этого людей в офис, но результата никакого не было, поэтому думал, что соц сети уже не работают, ой как я ошибался!
+                      |<br/><br/>Ещё раз огромное спасибо и процветания вашему агентству!
+                  .swiper-slide
+                    .swiper-awatar
+                      img(src="/assets/img/png/avatar.png" alt="avatar")
+                    .swiper-name__wrap
+                      .swiper-name Тёма Хитров
+                      .swiper-date 12 отября 2021
+                    .swiper-text Хочу поблагодарить всю команду рекламного агентства, никак не ожидал такого быстрого результата, ранее нанимал для этого людей в офис, но результата никакого не было, поэтому думал, что соц сети уже не работают, ой как я ошибался!
+                      |<br/><br/>Ещё раз огромное спасибо и процветания вашему агентству!
+                  .swiper-slide
+                    .swiper-awatar
+                      img(src="/assets/img/png/avatar.png" alt="avatar")
+                    .swiper-name__wrap
+                      .swiper-name Тёма Хитров
+                      .swiper-date 12 отября 2021
+                    .swiper-text Хочу поблагодарить всю команду рекламного агентства, никак не ожидал такого быстрого результата, ранее нанимал для этого людей в офис, но результата никакого не было, поэтому думал, что соц сети уже не работают, ой как я ошибался!
+                      |<br/><br/>Ещё раз огромное спасибо и процветания вашему агентству!
+                // If we need pagination
+                .swiper-button-prev.swiper-button-prev_n
+                .swiper-button-next.swiper-button-next_n
+                .swiper-pagination
+                 
+          .col-12
+            .section-foot.only-mobile
+              button.btn.btn-b-yellow Читать все отзывы 
+    section.section-6
+      .container 
+        .row 
+          .col-12
+            .section-head
+              h2.title 
+                <span class="d-block">Гарантии</span>
+                <span class="blue-text">Нашей работы</span>
+              button.btn.btn-text Смотреть все
+
+          .col-12.slider-col-wrapper
+            .slider
+              .swiper-certificates
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src="/assets/img/png/certificate.png" alt="certificate")
+                  .swiper-slide
+                    img(src="/assets/img/png/certificate.png" alt="certificate")
+                  .swiper-slide
+                    img(src="/assets/img/png/certificate.png" alt="certificate")
+                  .swiper-slide
+                    img(src="/assets/img/png/certificate.png" alt="certificate")
+                // If we need pagination
+                .swiper-button-prev.swiper-button-prev_n
+                .swiper-button-next.swiper-button-next_n
+                .swiper-pagination
+          .col-12
+            .section-foot.only-mobile
+              button.btn.btn-text Смотреть все
+    section.section-7
+      .container
+        .row 
+          .col-12
+            .section-head
+              h2.title <span class="d-block blue-text">Итог</span>
+                |нашей работы
+          .col-12.slider-col-wrapper 
+            .slider 
+              .swiper-itog
+                .swiper-wrapper
+                  .swiper-slide
+                    .swiper-slide-img_wrapper
+                      img(src="/assets/img/png/itog.png" alt="certificate")
+                    .swiper-slide-text
+                      div.swiper-slide-text__name Анализ метрики для сайта Kukuruza
+                      div.swiper-slide-text__date 12 отября 2021
+                  .swiper-slide
+                    .swiper-slide-img_wrapper
+                      img(src="/assets/img/png/itog.png" alt="certificate")
+                    .swiper-slide-text
+                      div.swiper-slide-text__name Анализ метрики для сайта Kukuruza
+                      div.swiper-slide-text__date 13 отября 2021
+                  .swiper-slide
+                    .swiper-slide-img_wrapper
+                      img(src="/assets/img/png/itog.png" alt="certificate")
+                    .swiper-slide-text
+                      div.swiper-slide-text__name Анализ метрики для сайта Kukuruza
+                      div.swiper-slide-text__date 14 отября 2021
+                  .swiper-slide
+                    .swiper-slide-img_wrapper
+                      img(src="/assets/img/png/itog.png" alt="certificate")
+                    .swiper-slide-text
+                      div.swiper-slide-text__name Анализ метрики для сайта Kukuruza
+                      div.swiper-slide-text__date 15 отября 2021
+                // If we need pagination
+                // If we need pagination
+                .swiper-button-prev.swiper-button-prev_n
+                .swiper-button-next.swiper-button-next_n
+                .swiper-pagination
+          .col-12.text-center.mobile-only
+            button.btn.btn__watch-all Смотреть все
+
+    section.section-8 
+      .container 
+        .row 
+          .col-7(style="width: 645px;")
+            h2 <span class="head_l">Условия сотрудничества с</span> другими агентствами
+            p Предоставьте Нам возможность работать с вашими клиентами и получите агентское комиссионное вознаграждение в размере 20% с каждого договора, а так же возможность делать ЛЮБУЮ наценку на наши услуги!
+              |<br/><br/>Наши партнерские цены достаточно низкие, (около 50%-75% рыночной цены) за счет сокращения издержек и производства услуг.
+          .col-5.section-8__bg-r
+            img(src="/assets/img/png/conditions.png" alt="conditions").right-image
+        .row 
+          .col-12
+            <div class="pseudo-text-wrapper">
+              h2.text-right.pseudo-text Форматы
+                br
+                |Сотрудничества
+        .row.formats-card__wrapper
+          .col-4
+            .formats-card.formats-card__1
+              .formats-card__head Мы – субподрядчик
+              .formats-card__text Вы привлекаете Нас как субподрядчика для оказания каких-либо услуг.
+          .col-4 
+            .formats-card.aqua.formats-card__2
+              .formats-card__head Мы – стратегические партнеры
+              .formats-card__text Вы передаете нам потенциального клиента, мы работаем напрямую с Вашим клиентом.
+          .col-4 
+            .formats-card.yellow 
+              .formats-card__head <span class="d-block">Мы – </span>аутсорсер
+              .formats-card__text Мы оказываем услуги вашим клиентам как ваш внешний отдел интернет-рекламы: ваш клиент работает только с Вами и не знает о Нас.
+    section.section-9
+      .container 
+        .row 
+          .col-12 
+            h2.title Об агенстве
+            p «Aznona» – рекламное агентство полного цикла . Мы начинаем с разработки дизайна, верстки страниц сайта и заканчиваем продвижением готового продукта на всех ресурсах, включая мобильную адаптированную версию. В этом случае для заказчиков удобна работа с одним подрядчиком, что еще и выгодно по цене. Разрабатывается единая стратегия, которая направлена на одну цель. Тогда достижение результата получается намного быстрее и эффективнее.
+              |Мы работаем, чтобы достичь всего 2 цели, но зато какие — информировании потенциальной целевой аудитории о новых товарах или услугах созданной компании. Вслед за этим идет всесторонне формирование положительной репутации. Реклама преподносит честную информацию без приукрашивания. Наши специалисты внимательно следят за актуальными тенденциями, понимают, что пользователям Интернета интересно в данный момент. В работе используются современные инструменты и технологии.
+            p Чем рекламное агентство «Aznona» отличается от других.
+              |Образно говоря, за одним столом мы собрали специалистов всех направлений, чтобы предоставлять услуги под ключ по всем видам деятельности. Большей частью рекламные агентства работают в узкоспециализированных сферах. Оперативная работа и соблюдение дедлайна — наше всё. Мы понимаем, что простои в работе сказываются на развитии бизнеса в целом и снижении прибыли в частности. Комплексная работа над проектами с гарантией результативности.
+            p С нами потенциальная целевая аудитория превращается в ваших заказчиков.
+              |Хотите заполучить львиную долю клиентов и покупателей? Мы знаем, как построить работу так, чтобы это получилось. Готовы поделиться более подробно всеми видами стратегий, выбрать приемлемую для вас, но уже при встрече. Заключаем договор на выгодных условиях, начинаем работать сразу же, отчитываясь по каждому этапу с предоставлением статистики и аналитики.
+    section.section-10 
+      .container 
+        .row
+          .col-12 
+            .section-head
+              h2.title Наши <span class="blue-text">партнеры</span>
+          .col-12.slider-col-wrapper 
+            .slider 
+              .swiper-partners
+                // Additional required wrapper
+                .swiper-wrapper
+                  .swiper-slide
+                    .swiper-slide-img_wrapper
+                      img(src="/assets/img/png/partner1.png" alt="certificate")
+                  .swiper-slide
+                    .swiper-slide-img_wrapper
+                      img(src="/assets/img/png/partner2.png" alt="certificate")
+                  .swiper-slide
+                    .swiper-slide-img_wrapper
+                      img(src="/assets/img/png/partner3.png" alt="certificate")
+                  .swiper-slide
+                    .swiper-slide-img_wrapper
+                      img(src="/assets/img/png/partner4.png" alt="certificate")
+                // If we need navigation buttons
+                .swiper-button-prev
+                .swiper-button-next
+
+
